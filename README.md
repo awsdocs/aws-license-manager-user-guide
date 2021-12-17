@@ -1,11 +1,6 @@
-## My Project
+# AWS License Manager User Guide
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+User guide for AWS License Manager
 
 ## Security
 
