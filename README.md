@@ -64,7 +64,7 @@ Amazon's trademarks and trade dress may not be used in
 
 ## AWS License Manager User Guide
 
-User guide for AWS License Manager
+The open source version of the AWS License Manager docs. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
 
 ## Security
 
