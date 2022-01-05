@@ -26,7 +26,7 @@ The following workflow describes the issuance of cryptographically signed licens
       ],
       "expiration":"2020-12-01T00:47:35",
       "issuedAt":"2020-11-30T23:47:35",
-      "licenseArn":"arn:aws:license-manager::277886486208:license:l-6585590917ad46858328ff02dEXAMPLE",
+      "licenseArn":"arn:aws:license-manager::123456789012:license:l-6585590917ad46858328ff02dEXAMPLE",
       "licenseConsumptionToken":"306eb19afd354ba79c3687b9bEXAMPLE",
       "nodeId":"100.20.15.10",
       "checkoutMetadata":{
