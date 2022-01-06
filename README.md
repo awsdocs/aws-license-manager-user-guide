@@ -14,7 +14,7 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What is AWS License Manager?](doc_source/doc_source/license-manager.md)
++ [What is AWS License Manager?](doc_source/license-manager.md)
 + [How License Manager works](doc_source/license-manager-overview.md)
 + [Getting started with AWS License Manager](doc_source/getting-started.md)
 + [Working with AWS License Manager](doc_source/using-license-manager.md)
