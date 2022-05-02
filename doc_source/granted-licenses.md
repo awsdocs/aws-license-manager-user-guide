@@ -135,3 +135,13 @@ Licenses have two statuses: The **License status**, which shows the overall avai
 |   Rejected  |   The grant recipient has rejected the grant\.  | 
 |   Deleted  |   The grantor has deleted the grant\.  | 
 |   Workflow complete  |   The grant is a grant to an organization, and the workflow to distribute or recall the grant has been completed\. The grant details show the status of sub\-grants to each account in the organization\.  | 
+
+## Metrics for buyer accounts<a name="how-metrics-emit-buyers"></a>
+
+When you record usage against a seller issued license for a buyer account, License Manager emits a CloudWatch metric to the seller account, root buyer account, and the account against which the usage is being recorded\.
+
+In addition, when a seller or independent software vendor \(ISV\) application records usage against a license for a buyer account, the account in which usage is being recorded and the root buyer account see a CloudWatch widget with usage records in their License Manager console\. Buyers can also see metrics for accounts that they have distributed licenses to in AWS Organizations\. These graphs are available for every license for which usage records have been sent\.
+
+### Usage dashboard example<a name="usage-dashboard-example"></a>
+
+![\[This is an example image of the Usage Dashboard.\]](http://docs.aws.amazon.com/license-manager/latest/userguide/images/license-manager-usage-api-usage-dash.png)

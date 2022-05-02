@@ -5,9 +5,9 @@ The following table describes the releases of AWS License Manager\.
 
 | Feature | Description | Date | 
 | --- | --- | --- | 
-| [AWS managed policy updates](security-iam-awsmanpol.md) \- Update to an existing policy | License Manager updated an existing AWS managed policy\. | November 16, 2021 | 
-| License type conversion \(console\) | Change your license type between AWS\-provided licensing and Bring Your Own License \(BYOL\) using the License Manager console without redeploying your existing workloads\. | November 9, 2021 | 
-| License type conversion \(CLI\) | Change your license type between AWS\-provided licensing and Bring Your Own License \(BYOL\) using the AWS CLI without redeploying your existing workloads\. | September 22, 2021 | 
+| Record and submit license usage data \(console\) | Record and submit license usage data using the License Manager console\. | March 28, 2022 | 
+| License type conversion \(console\) | Change your license type between AWS\-provided licensing and Bring Your Own License model \(BYOL\) using the License Manager console without redeploying your existing workloads\. | November 9, 2021 | 
+| License type conversion \(CLI\) | Change your license type between AWS\-provided licensing and Bring Your Own License model \(BYOL\) using the AWS CLI without redeploying your existing workloads\. | September 22, 2021 | 
 | Sharing entitlements | Share managed license entitlements with your entire organization with one request\. | July 16, 2021 | 
 | License reports | Track the history of your license type configurations with License Manager report generators\.  | May 18, 2021 | 
 | Automated discovery exclusion rules | Exclude instances from License Manager automated discovery based on AWS account IDs and tags\.  | March 5, 2021 | 

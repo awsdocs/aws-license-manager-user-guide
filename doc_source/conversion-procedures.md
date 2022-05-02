@@ -2,7 +2,7 @@
 
 You can convert license types using the License Manager console or the AWS CLI\. When you create a license type conversion task, License Manager validates the billing products on your instance\. If these preliminary validations are successful, License Manager creates a license type conversion task\. You can check the status of a license conversion task by using the `list-license-conversion-tasks` and ` get-license-conversion-task` AWS CLI commands\.
 
-License Manager might update the resources associated with your customer managed licenses as part of a conversion task\. Specifically, for any customer managed license with automated discovery rules of type `License Included`, License Manager disassociates the resource in the license type conversion task from the license if the `License Included` automated discovery rule explicitly excludes the resource\.
+License Manager might update the resources associated with your customer managed licenses as part of a conversion task\. Specifically, for any customer managed license with automated discovery rules of type `License Included`, License Manager disassociates the resource in the license type conversion task from the license if the `license included` automated discovery rule explicitly excludes the resource\.
 
 For example, if your customer managed license contains two automated discovery rules, and each rule excludes license included Windows Server, then a license type conversion from BYOL to license included Windows Server results in disassociation of the instance from the customer managed license\. However, if only one of the two automated discovery rules contains a `License Included` rule, then the instance is not disassociated\.
 
@@ -15,6 +15,7 @@ The billing product information on the AMI used to launch an instance does not c
 + [License type conversion limits](#conversion-limits)
 + [Convert a license type using the License Manager console](#conversion-console)
 + [Convert a license type using the AWS CLI](#conversion-cli)
++ [Troubleshooting license type conversion](#conversion-troubleshooting)
 
 ## License type conversion limits<a name="conversion-limits"></a>
 
@@ -23,7 +24,7 @@ The use of Microsoft software is subject to the licensing terms of Microsoft\. Y
 
 License Manager restricts the types of license conversion tasks that you can create in accordance with the Microsoft Service Provider License Agreement \(SPLA\)\. Some of the restrictions that license type conversion is subject to are listed as follows\. This is not a comprehensive list and is subject to change\.
 + The Amazon EC2 instance must be launched from your own virtual machine \(VM\) image\.
-+ License included SQL Server cannot be run on a Dedicated Host\.
++ license included SQL Server cannot be run on a Dedicated Host\.
 + A license included SQL Server instance must have at least 4 vCPUs\.
 
 ## Convert a license type using the License Manager console<a name="conversion-console"></a>
@@ -75,7 +76,7 @@ You might need to update the AWS CLI to run certain commands and receive all req
    ```
 
 **Note**  
-The usage operation for Windows Server with SQL Enterprise BYOL is the same as the usage operation for Windows BYOL because they are identically billed\.<a name="convert-to-byol"></a>
+The usage operation for Windows Server with SQL Server Enterprise BYOL is the same as the usage operation for Windows BYOL because they are identically billed\.<a name="convert-to-byol"></a>
 
 **Convert Windows Server from license included to BYOL**
 
@@ -113,7 +114,7 @@ aws license-manager create-license-conversion-task-for-resource \
 ```
 
 **Convert Windows Server from license included to BYOL and SQL Server Standard from BYOL to license included**  
-You can switch multiple products at the same time, and in multiple directions\. For example, you can convert both Windows Server and SQL Server in one license type conversion task\. 
+You can switch multiple products at the same time, and in multiple directions\. For example, you can convert both Windows Server and SQL Server in one license type conversion task\.
 
 To convert the license type of your Windows Server instance from license included to BYOL, and SQL Server Standard from BYOL to license included, run the following command, replacing the ARN with the ARN of the instance you want to convert\.
 
@@ -123,3 +124,10 @@ aws license-manager create-license-conversion-task-for-resource \
     --source-license-context UsageOperation=RunInstances:0002 \
     --destination-license-context UsageOperation=RunInstances:0804
 ```
+
+## Troubleshooting license type conversion<a name="conversion-troubleshooting"></a>
+
+**Incomplete license type conversion tasks**  
+License type conversion tasks contain multiple steps\. In some cases, when you convert Windows Server instances from BYOL to license included, the billing products on an instance are successfully updated\. However, the KMS server might not switch to the AWS KMS server\.
+
+To remediate this issue, follow the steps in [Why did Windows activation fail on my EC2 Windows instance?](http://aws.amazon.com/premiumsupport/knowledge-center/windows-activation-fails/) to activate Windows either with the Systems Manager [AWSSupport\-ActivateWindowsWithAmazonLicense](https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-awssupport-activatewindowswithamazonlicense.html) Automation runbook, or log in to the instance and manually make the switch to the AWS KMS server\.

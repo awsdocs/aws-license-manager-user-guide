@@ -33,7 +33,6 @@ Amazon's trademarks and trade dress may not be used in
       + [Prerequisites](conversion-prerequisites.md)
       + [Convert a license type](conversion-procedures.md)
       + [Tenancy conversion](conversion-tenancy.md)
-      + [Troubleshooting license type conversion](conversion-troubleshooting.md)
    + [Host resource groups in AWS License Manager](host-resource-groups.md)
       + [Adding Dedicated Hosts to a host resource group](add-hosts.md)
       + [Removing Dedicated Hosts from a host resource group](remove-hosts.md)

@@ -1,6 +1,6 @@
 # License type conversions in License Manager<a name="license-conversion"></a>
 
-You can change your license type between AWS provided licensing and Bring Your Own License \(BYOL\) as your business needs change, without redeploying your existing workloads\. 
+You can change your license type between AWS provided licensing and Bring Your Own License model \(BYOL\) as your business needs change, without redeploying your existing workloads\. 
 
 You can optimize your license inventory for the following scenarios using license type conversion:
 
@@ -11,11 +11,10 @@ During your migration, you can deploy your workload to Amazon EC2 and use AWS pr
 If your license agreement with Microsoft is about to expire and you do not plan to renew it, you can use License Manager license type conversion to switch from BYOL to AWS provided licenses\. This switch allows you to continue running your workloads with fully compliant software licenses provided by AWS with a flexible pay\-as\-you go licensing model\.
 
 **Optimize costs**  
-For small or irregular workloads, license\-included instances might be more cost effective than running BYOL because BYOL might require a longer term commitment\. For this case, you can use License Manager license type conversion to switch your instances to use AWS provided licenses to optimize licensing related costs\. Additionally, when your workload is more steady or predictable, you can easily switch back to BYOL and use licensed media acquired directly from your software vendor if your instances were launched from your own virtual machine \(VM\) image\.
+For small or irregular workloads, AWS provided licenses \(license included\) instances might be more cost effective than running BYOL because BYOL might require a longer term commitment\. For this case, you can use License Manager license type conversion to switch your instances to license included to optimize licensing related costs\. Additionally, when your workload is more steady or predictable, you can easily switch back to BYOL and use licensed media acquired directly from your software vendor if your instances were launched from your own virtual machine \(VM\) image\.
 
 **Topics**
 + [Eligible license types for license type conversion](conversion-types.md)
 + [Prerequisites](conversion-prerequisites.md)
 + [Convert a license type](conversion-procedures.md)
 + [Tenancy conversion](conversion-tenancy.md)
-+ [Troubleshooting license type conversion](conversion-troubleshooting.md)
