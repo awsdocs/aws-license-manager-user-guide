@@ -22,7 +22,7 @@ In addition, the customer has made the following decisions:
 + A hard limit is imposed to restrict license consumption to the quantity purchased\.
 + Each server needs a maximum of 16 cores\.
 
-The following table associates the License Manager rule\-making parameters with the vendor licensing requirements that they capture and automate\. The example values are for illustration purposes only; you would specify the values that you need in your own license configurations\.
+The following table associates the License Manager rule\-making parameters with the vendor licensing requirements that they capture and automate\. The example values are for illustration purposes only; you would specify the values that you need in your own self\-managed licenses\.
 
 
 | License Manager Rule | Settings | 

@@ -33,11 +33,9 @@ Granted licenses require cross\-Region replication of license metadata\. License
 1. In the navigation pane, choose **Granted licenses**\.
 
 1. \(Optional\) Use the filter options, such as the following, to scope the list of licenses that are displayed\.
-   + Product name – The name of the product\.
-   + Issuer – The entity that issued the license\. For example, licenses created by AWS Marketplace have an issuer of **AWS/Marketplace**\.
-   + Seller of record – The entity that sold the product\.
+   + Product SKU – The product identifier for this license, as defined by the license issuer when creating the license\. The same product SKU might exist across multiple ISVs\.
+   + Recipient – The ARN of the license recipient\.
    + Status – The status of the license\. For example, **Available**\.
-   + Grant status – The status of the grant\. For example, **Pending acceptance**\.
 
 1. To view additional information about the license, choose the license ID to open the license detail page\.
 

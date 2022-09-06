@@ -1,19 +1,19 @@
-# Discover resource inventory<a name="discovery"></a>
+# Working with inventory search<a name="discovery"></a>
 
-License Manager uses [Systems Manager inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to discover software usage on premises\. After you associate a license configuration with on\-premises servers, License Manager periodically collects software inventory, updates licensing information, and refreshes its dashboards to report usage\.
+License Manager uses [Systems Manager inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to discover software usage on premises\. After you associate a self\-managed license with on\-premises servers, License Manager periodically collects software inventory, updates licensing information, and refreshes its dashboards to report usage\.
 
 **Topics**
 + [Setting up for inventory search](#discovery-setup)
 + [Using inventory search](#using-discovery)
-+ [Adding automated discovery rules to a license configuration](#add-discovery-rule)
-+ [Associating a license configuration with discovered inventory](#discovered)
-+ [Disassociating a license configuration and a resource](#disassociate)
++ [Adding automated discovery rules to a self\-managed license](#add-discovery-rule)
++ [Associating a self\-managed license with inventory search](#discovered)
++ [Disassociating a self\-managed license and a resource](#disassociate)
 
 ## Setting up for inventory search<a name="discovery-setup"></a>
 
 Complete the following requirements before using resource inventory search:
 + Enable cross\-account inventory discovery by integrating License Manager with your AWS Organizations account\. For more information, see [Settings in License Manager](settings.md)\.
-+ Create license configurations for the servers and applications to manage\. For example, create a license configuration that reflects the terms of your licensing agreement with Microsoft for SQL Server Enterprise\.
++ Create self\-managed licenses for the servers and applications to manage\. For example, create a self\-managed license that reflects the terms of your licensing agreement with Microsoft for SQL Server Enterprise\.
 
 ## Using inventory search<a name="using-discovery"></a>
 
@@ -23,7 +23,7 @@ Complete the following steps to search your resource inventory\. You can search 
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
-1. In the navigation pane, choose **Search inventory**\.
+1. In the navigation pane, choose **Inventory search**\.
 
 1. Specify filter options to scope the list of displayed resources\.
 
@@ -41,19 +41,19 @@ Complete the following steps to search your resource inventory\. You can search 
 
    For more information, see [Oracle Licensing](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html#Oracle.Concepts.Licensing) in the *Amazon RDS User Guide*\.
 
-## Adding automated discovery rules to a license configuration<a name="add-discovery-rule"></a>
+## Adding automated discovery rules to a self\-managed license<a name="add-discovery-rule"></a>
 
-After you add product information to your license configuration, License Manager can track license usage for the instances that have those products installed\. For more information, see [Automated discovery of resource inventory](automated-discovery.md)\.
+After you add product information to your self\-managed license, License Manager can track license usage for the instances that have those products installed\. For more information, see [Automated discovery of inventory](automated-discovery.md)\.
 
-**To add automated discovery rules to a license configuration**
+**To add automated discovery rules to a self\-managed license**
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
-1. Open the **Search inventory** page\.
+1. Open the **Inventory search** page\.
 
 1. Select the resource and choose **Add automated discovery rules**\.
 
-1. For **License configuration**, select a license configuration\.
+1. For **Self\-managed license**, select a self\-managed license\.
 
 1. Specify the products to discover and track\.
 
@@ -71,36 +71,36 @@ Exclusion rules do not apply to RDS products \(such as Oracle Database\)\.
 
 1. Choose **Add**\.
 
-## Associating a license configuration with discovered inventory<a name="discovered"></a>
+## Associating a self\-managed license with inventory search<a name="discovered"></a>
 
-After you have identified the unmanaged resources that you need to manage, you can manually associate them with a license configuration, instead of using automated discovery\.
+After you have identified the unmanaged resources that you need to manage, you can manually associate them with a self\-managed license, instead of using automated discovery\.
 
-**To associate a license configuration with a resource**
+**To associate a self\-managed license with a resource**
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
-1. Open the **Search inventory** page\.
+1. Open the **Inventory search** page\.
 
-1. Select the resource and choose **Associate license configuration**\.
+1. Select the resource and choose **Associate self\-managed license**\.
 
-1. For **License configuration name**, select a license configuration\.
+1. For **self\-managed license name**, select a self\-managed license\.
 
-1. \(Optional\) Select **Share license configuration with all my member accounts**\.
+1. \(Optional\) Select **Share self\-managed license with all my member accounts**\.
 
 1. Choose **Associate**\.
 
-## Disassociating a license configuration and a resource<a name="disassociate"></a>
+## Disassociating a self\-managed license and a resource<a name="disassociate"></a>
 
-If the licensing terms from your software vendors change, you can disassociate resources that were associated manually and then delete the license configuration\.
+If the licensing terms from your software vendors change, you can disassociate resources that were associated manually and then delete the self\-managed license\.
 
-**To disassociate a license configuration and a resource**
+**To disassociate a self\-managed license and a resource**
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
-1. In the left navigation pane, choose **License configuration**\.
+1. In the left navigation pane, choose **self\-managed license**\.
 
-1. Choose the name of the license configuration\.
+1. Choose the name of the self\-managed license\.
 
-1. Choose **Associated resources**\.
+1. Choose **Resources**\.
 
-1. Select each of the resources to disassociate from the license configuration and then choose **Disassociate resource**\.
+1. Select each of the resources to disassociate from the self\-managed license and then choose **Disassociate resource**\.

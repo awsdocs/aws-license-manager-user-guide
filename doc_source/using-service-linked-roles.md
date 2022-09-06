@@ -12,3 +12,4 @@ License Manager actions depend on three service\-linked roles, as described in t
 + [Core role](license-manager-role-core.md)
 + [Management account role](management-role.md)
 + [Member account role](member-role.md)
++ [User\-based subscription role](user-based-subscription-role.md)

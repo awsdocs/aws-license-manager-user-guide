@@ -159,10 +159,14 @@ Alternatively, if the customer does not have an AWS account, you can use the Lic
 1. For **Grants**, choose **Create grant**\.
 
 1. For **Grant details**, provide the following information:
-   + **Grant name** – The grant name\. This is used to enable search capabilities\.
-   + **AWS account ID** – The AWS account number of the license recipient\.
-   + **License rights** – Choose **Consumption** if the recipient can consume granted entitlements only and **Distribution** if the recipient can distribute granted entitlements to other AWS accounts\.
-   + **Home Region** – The AWS Region for the license\.
+   + **Grant name** — The grant name\. This is used to enable search capabilities\.
+   + **AWS account ID** — The AWS account number of the license recipient\.
+   + **License rights**
+     + Select **Consumption** if the recipient can consume granted entitlements\.
+     + Select **Distribution** if the recipient can distribute granted entitlements to other AWS accounts\.
+     + Select **Allow on\-premise token generation** to authenticate shared licenses without using AWS identities or credentials\.
+     + Select **Allow submission of usage records** to permit license recipients to emit usage records for usage types\.
+   + **Home Region** — The AWS Region for the license\.
 
 1. Choose **Create grant**\.
 

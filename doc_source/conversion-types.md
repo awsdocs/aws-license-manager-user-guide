@@ -10,7 +10,9 @@ Instances that were originally launched from an Amazon provided Amazon Machine I
 + SQL Server Enterprise edition
 + SQL Server Web edition
 
-A conversion task changes the usage operation value associated with your instance\. Usage operation values for each supported platform are provided in the following table\. For more information, see [AMI billing information fields](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html)\.
+## Usage operation values<a name="usage-operation-values"></a>
+
+A license type conversion changes the usage operation value associated with your instance\. Usage operation values for each supported platform are provided in the following table\. For more information, see [AMI billing information fields](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html)\.
 
 
 |  Platform details  |  Usage operation  | 
@@ -22,6 +24,8 @@ A conversion task changes the usage operation value associated with your instanc
 |  Windows Server as license included SQL Server Web as license included  | RunInstances:0202 | 
 |  Windows Server as license included SQL Server Standard as license included  |  RunInstances:0006  | 
 |  Windows Server as license included SQL Server Enterprise as license included  | RunInstances:0102 | 
+
+## Media compatibility<a name="media-compatibility"></a>
 
 The following table confirms which media can be used on which instance licensing models\.
 
@@ -39,7 +43,9 @@ The following table confirms which media can be used on which instance licensing
 
 ² Denotes that you have sourced your own SQL Server installation media \(\.iso, \.exe\)\.
 
-The following table confirms if the source license model can be converted to another between BYOL and license included\.
+## Conversion paths<a name="conversion-paths"></a>
+
+The following table confirms if the source license model can be converted to another between BYOL and license included\. For more information, see [Convert a license type](conversion-procedures.md)\.
 
 **Important**  
 Windows Server as BYOL with SQL Server as license included is an unsupported configuration\.
@@ -61,7 +67,7 @@ Conversions that are specified as "Not needed" won't change the usage operation 
 |  Windows Server as license included \(your media\) SQL Server as license included \(your media\)  | Yes \* ‡ ♣ | Yes ‡ | Yes \* | Yes | Unsupported | Not needed | 
 |  Windows Server as license included \(AWS provided image\) SQL Server as license included \(your media\)  | No ✗ | Yes ‡ | No ✗ | Yes | Unsupported | Not needed | 
 
-✗ You must deploy a new instance with an alternate configuration, as converting to the target license type\(s\) is not supported\. Refer to the [media compatibility table](#media-compatibility-table) on this page for more information\.
+✗ You must deploy a new instance with an alternate configuration, as converting to the target license type\(s\) is not supported\. For more information, see [Media compatibility](#media-compatibility)\.
 
 For other conversion scenarios, you might need to take the following steps to perform a license conversion:
 

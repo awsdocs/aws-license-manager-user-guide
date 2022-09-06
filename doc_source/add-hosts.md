@@ -1,11 +1,11 @@
 # Adding Dedicated Hosts to a host resource group<a name="add-hosts"></a>
 
-You can add your existing hosts to a host resource group from the AWS Management Console, AWS CLI, or AWS API\. To add your hosts, you must be the AWS account owner where you created the Dedicated Host and host resource groups\. If your host resource group lists allowed license configurations and instances types, the host you add must match these requirements\. 
+You can add your existing hosts to a host resource group from the AWS Management Console, AWS CLI, or AWS API\. To add your hosts, you must be the AWS account owner where you created the Dedicated Host and host resource groups\. If your host resource group lists allowed self\-managed licenses and instances types, the host you add must match these requirements\. 
 
 **Note**  
 Suppose you stop the instances and want to restart them\. You must perform the following two tasks:  
  [Modify](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstancePlacement.html) the instance to point to the host resource group\.
-[Associate](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_UpdateLicenseSpecificationsForResource.html) license configurations to match the host resource group\.
+[Associate](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_UpdateLicenseSpecificationsForResource.html) self\-managed licenses to match the host resource group\.
 
 For more information about Resource Groups, see [AWS Resource Groups User Guide](https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html)\.
 

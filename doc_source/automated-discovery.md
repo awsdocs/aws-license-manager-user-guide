@@ -1,33 +1,33 @@
-# Automated discovery of resource inventory<a name="automated-discovery"></a>
+# Automated discovery of inventory<a name="automated-discovery"></a>
 
-License Manager uses [Systems Manager inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to discover software usage on Amazon EC2 instances and on\-premises instances\. You can add product information to your license configuration, and License Manager will track the instances that have those products installed\. Additionally, you can specify exclusion rules based on your licensing agreement to decide which instances to exclude\. You can exclude instances belonging to AWS account IDs or associated with resource tags from being considered for automated discovery
+License Manager uses [Systems Manager inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to discover software usage on Amazon EC2 instances and on\-premises instances\. You can add product information to your self\-managed license, and License Manager will track the instances that have those products installed\. Additionally, you can specify exclusion rules based on your licensing agreement to decide which instances to exclude\. You can exclude instances belonging to AWS account IDs or associated with resource tags from being considered for automated discovery
 
-Automated discovery can be added to a new license set, to an existing license configuration, or resources in your inventory\. Rules for automated discovery can be edited at any time through the CLI using the [UpdateLicenseConfiguration](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_UpdateLicenseConfiguration.html) API command\. To edit rules in the console, you must delete the existing license configuration and create a new one\.
+Automated discovery can be added to a new license set, to an existing self\-managed license, or resources in your inventory\. Rules for automated discovery can be edited at any time through the CLI using the [UpdateLicenseConfiguration](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_UpdateLicenseConfiguration.html) API command\. To edit rules in the console, you must delete the existing self\-managed license and create a new one\.
 
-To use automated discovery, you must add product information to your license configuration\. You can do so when you create the license configuration using search inventory\.
+To use automated discovery, you must add product information to your self\-managed license\. You can do so when you create the self\-managed license using **Inventory search**\.
 
 You cannot manually disassociate instances tracked by automated discovery\. By default, automated discovery does not disassociate tracked instances after the software is uninstalled\. You can configure automated discovery to stop tracking instances when the software is uninstalled\.
 
 After you configure automated discovery, you can track license usage through the License Manager dashboard\.
 
 **Prerequisites**
-+ Enable cross\-account inventory discovery by integrating License Manager with your AWS Organizations account\. For more information, see [Settings in License Manager](settings.md)\.
++ Enable cross\-account inventory search by integrating License Manager with your AWS Organizations account\. For more information, see [Settings in License Manager](settings.md)\.
 **Note**  
  Single accounts can set up automated discovery but cannot add exclusion rules\.
 + Install Systems Manager inventory on your instances\.
 
-**To configure automated discovery when you create a license configuration**  
-You can configure automated discovery rules and exclusion rules when you create a license configuration\. For more information, see [Create a license configuration](create-license-configuration.md)\.
+**To configure automated discovery when you create a self\-managed license**  
+You can configure automated discovery rules and exclusion rules when you create a self\-managed license\. For more information, see [Create a self\-managed license](create-license-configuration.md)\.
 
-**To add automated discovery rules to an existing configuration**
+**To add automated discovery rules to an existing self\-managed license**
 
- Use the process below to add automated discovery rules to existing license configurations through the console, you can also do this from the **Search inventory** pane by selecting an resource ID and selecting **Add automated discovery rules**\.
+ Use the process below to add automated discovery rules to existing self\-managed licenses through the console, you can also do this from the **Inventory search** pane by selecting an resource ID and selecting **Add automated discovery rules**\.
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
-1. In the left navigation pane, choose **Customer managed licenses**\.
+1. In the left navigation pane, choose **Self\-managed licenses**\.
 
-1. Choose the name of the license configuration to open the license details page\.
+1. Choose the name of the self\-managed license to open the license details page\.
 
 1. On the **Automated discovery rules** tab, choose **Add automated discovery rules**\.
 

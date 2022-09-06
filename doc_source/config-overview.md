@@ -1,14 +1,12 @@
-# License configuration parameters and rules<a name="config-overview"></a>
+# Self\-managed license parameters and rules<a name="config-overview"></a>
 
-A license configuration consists of basic parameters and rules that vary according to the parameter values\. You can also add tags to your license configurations\. After you create a license configuration, an administrator can modify the number of licenses and the usage limit to reflect changing resource needs\.
+A self\-managed license consists of basic parameters and rules that vary according to the parameter values\. You can also add tags to your self\-managed licenses\. After you create a self\-manged license, an administrator can modify the number of licenses and the usage limit to reflect changing resource needs\.
 
 Available parameters and rules include the following:
-+ **Name** — The name of the license configuration\.
-+ **Description** — A description of the license configuration\.
-+ **License counting type** — The metric used to count licenses\. Supported values are physical core, vCPU, socket, and instance\.
-+ **\(Optional\) License count** — The number of licenses managed by this configuration\.
-+ **\(Optional\) License count hard limit** — The kind of limit represented by the license count\. A hard limit blocks the launch of an out\-of\-compliance instance\. A soft limit permits out\-of\-compliance launches but sends an alert when one occurs\. 
-+ **Number of licenses consumed** \- The number of licenses used by a resource\.
++ **Self\-managed license name** — The name of the self\-manged license\.
++ **\(Optional\) Description** — A description of the self\-manged license\.
++ **License type** — The metric used to count licenses\. Supported values are **vCPUs**, **Cores**, **Sockets**, and **Instances**\.
++ **\(Optional\) Number of <option>** \- The number of licenses used by a resource\.
 + **Status** — Indicates whether the configuration is active\.
 + **Product information** — The names and versions of the products for [automated discovery](automated-discovery.md)\. The supported products are Windows Server, SQL Server, and Oracle Database\.
 + **\(Optional\) Rules** \- These include the following\. Available rules vary by counting type\.

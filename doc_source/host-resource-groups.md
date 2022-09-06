@@ -10,8 +10,8 @@ You can configure the following settings for a host resource group:
 + **Allocate hosts automatically**–Indicates whether Amazon EC2 can allocate new hosts on your behalf if launching an instance in this host resource group would exceed its available capacity\.
 + **Release hosts automatically**–Indicates whether Amazon EC2 can release unused hosts on your behalf\. An unused host has no running instances\.
 + **Recover hosts automatically**–Indicates whether Amazon EC2 can move instances from a host that has failed unexpectedly to a new host\.
-+ **Associated license configurations**–The license configurations that can be used to launch instances in this host resource group\.
-+ **Instance families**–The types of instances that you can launch\. By default, you can launch any instance types that are supported on a Dedicated Host\. If you launch [Nitro\-based](url-ec2-user;instance-types.html#ec2-nitro-instances) instances, then you can launch instances with different instance types in the same host resource group\. Otherwise, you must launch only instances with the same instance type in the same host resource group\.
++ **Associated self\-managed licenses**–The self\-managed licenses that can be used to launch instances in this host resource group\.
++ **\(Optional\) Instance families**–The types of instances that you can launch\. By default, you can launch any instance types that are supported on a Dedicated Host\. If you launch [Nitro\-based](url-ec2-user;instance-types.html#ec2-nitro-instances) instances, then you can launch instances with different instance types in the same host resource group\. Otherwise, you must launch only instances with the same instance type in the same host resource group\.
 
 **Topics**
 + [Create a host resource group](#host-resource-group-create)
@@ -24,7 +24,7 @@ You can configure the following settings for a host resource group:
 
 ## Create a host resource group<a name="host-resource-group-create"></a>
 
-Configure a host resource group to enable License Manager to manage your Dedicated Hosts\. To best utilize your most expensive licenses, you can associate one or more core\- or socket\-based license configurations with your host resource group\. To best optimize host utilization, you can allow all core\- or socket\-based license configurations with your host resource group\.
+Configure a host resource group to enable License Manager to manage your Dedicated Hosts\. To best utilize your most expensive licenses, you can associate one or more core\- or socket\-based self\-managed licenses with your host resource group\. To best optimize host utilization, you can allow all core\- or socket\-based self\-managed licenses with your host resource group\.
 
 **To create a host resource group**
 
@@ -43,7 +43,7 @@ Configure a host resource group to enable License Manager to manage your Dedicat
 
 1. \(Optional\) For **Additional settings**, select the instance families that you can launch in the host resource group\.
 
-1. For **License configurations**, select one or more core\- or socket\-based license configurations\.
+1. For **self\-managed licenses**, select one or more core\- or socket\-based self\-managed licenses\.
 
 1. \(Optional\) For **Tags**, add one or more tags\.
 
@@ -51,11 +51,11 @@ Configure a host resource group to enable License Manager to manage your Dedicat
 
 ## Share a host resource group<a name="host-resource-group-share"></a>
 
-You can use AWS Resource Access Manager to shared your host resource groups through AWS Organizations\. After you share a host resource group and license configuration, member accounts can launch instances into the shared host resource group\. The new hosts are allocated in the account that owns the host resource group\. The member account owns the instances\. For more information, see the [AWS RAM User Guide](https://docs.aws.amazon.com/ram/latest/userguide/)\.
+You can use AWS Resource Access Manager to shared your host resource groups through AWS Organizations\. After you share a host resource group and self\-managed license, member accounts can launch instances into the shared host resource group\. The new hosts are allocated in the account that owns the host resource group\. The member account owns the instances\. For more information, see the [AWS RAM User Guide](https://docs.aws.amazon.com/ram/latest/userguide/)\.
 
 ## Launch an instance in a host resource group<a name="host-resource-group-launch"></a>
 
-When you launch an instance, you can specify a host resource group\. For example, you can use the following [run\-instances](https://docs.aws.amazon.com/cli/latest/reference/ec2/run-instances.html) command\. You must associate a core\- or socket\-based license configuration with the AMI\.
+When you launch an instance, you can specify a host resource group\. For example, you can use the following [run\-instances](https://docs.aws.amazon.com/cli/latest/reference/ec2/run-instances.html) command\. You must associate a core\- or socket\-based self\-managed license with the AMI\.
 
 ```
 aws ec2 run-instances --min-count 2 --max-count 2 \

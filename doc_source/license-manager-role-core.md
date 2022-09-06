@@ -1,4 +1,4 @@
-# License Manager—Core role<a name="license-manager-role-core"></a>
+# License Manager – Core role<a name="license-manager-role-core"></a>
 
 License Manager requires a service\-linked role to manage licenses on your behalf\.
 
@@ -6,7 +6,7 @@ License Manager requires a service\-linked role to manage licenses on your behal
 
 The service\-linked role named **AWSServiceRoleForAWSLicenseManagerRole** allows License Manager access to AWS resources to manage licenses on your behalf\.
 
-The **AWSServiceRoleForAWSLicenseManagerRole** service\-linked role trusts the `license-manager.amazonaws.com` service to assume the role\.
+The `AWSServiceRoleForAWSLicenseManagerRole` service\-linked role trusts the `license-manager.amazonaws.com` service to assume the role\.
 
 The role permissions policy allows License Manager to complete the following actions on the specified resources\.
 
@@ -44,11 +44,11 @@ You don't need to manually create a service\-linked role\. When you complete the
 You can also use the IAM console, AWS CLI, or IAM API to create a service\-linked role manually\. For more information, see [Creating a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. 
 
 **Important**  
-This service\-linked role can appear in your account if you completed an action in another service that uses the features supported by this role\. If you were using License Manager before January 1, 2017, when it began supporting service\-linked roles, then License Manager created the **AWSServiceRoleForAWSLicenseManagerRole** role in your account\. For more information, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
+This service\-linked role can appear in your account if you completed an action in another service that uses the features supported by this role\. If you were using License Manager before January 1, 2017, when it began supporting service\-linked roles, then License Manager created the `AWSServiceRoleForAWSLicenseManagerRole` role in your account\. For more information, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
 
 You can use the License Manager console to create a service\-linked role\.
 
-**To create a service\-linked role**
+**To create the service\-linked role**
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
@@ -62,7 +62,7 @@ If you delete this service\-linked role, you can use the same IAM process to cre
 
 ## Edit a service\-linked role for License Manager<a name="edit-service-linked-role-core"></a>
 
-License Manager does not allow you to edit the **AWSServiceRoleForAWSLicenseManagerRole** service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
+License Manager doesn't allow you to edit the `AWSServiceRoleForAWSLicenseManagerRole` service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
 
 ## Delete a service\-linked role for License Manager<a name="delete-service-linked-role-core"></a>
 
@@ -70,7 +70,7 @@ If you no longer need to use a feature or service that requires a service\-linke
 
 ### Clean up a service\-linked role<a name="service-linked-role-review-before-delete-core"></a>
 
-Before you can use IAM to delete a service\-linked role, you must first delete all resources used by the role\. This means disassociating any license configurations from associated instances and AMIs, and then deleting the license configurations\.
+Before you can use IAM to delete a service\-linked role, you must first delete all resources used by the role\. This means disassociating any self\-managed licenses from associated instances and AMIs, and then deleting the self\-managed licenses\.
 
 **Note**  
 If License Manager is using the role when you try to delete the resources, then the deletion might fail\. If that happens, wait for a few minutes and try the action again\.
@@ -79,14 +79,14 @@ If License Manager is using the role when you try to delete the resources, then 
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
-1. In the navigation pane, choose **License configuration**\. 
+1. In the navigation pane, choose **Self\-managed licenses**\.
 
-1. For a specific license configuration for which you are the owner, disassociate all associated AMIs and resources\.
+1. Choose a self\-managed license for which you are the owner and disassociate all entries within the **Associated AMIs** and **Resources** tabs\. Repeat this process for each license configuration\.
 
-1. While still on the license configuration page, delete the license configuration\.
+1. While still on the self\-managed license's page, choose **Actions**, then choose **Delete**\.
 
-1. Repeat the previous steps until all license configurations have been deleted\.
+1. Repeat the previous steps until all self\-managed licenses have been deleted\.
 
 ### Manually delete the service\-linked role<a name="slr-manual-delete-core"></a>
 
-Use the IAM console, the AWS CLI, or the AWS API to delete the **AWSServiceRoleForAWSLicenseManagerRole** service\-linked role\. If you are also using [AWSLicenseManagerMasterAccountRole](management-role.md) and [AWSLicenseManagerMemberAccountRole](member-role.md), delete those roles first\. For more information, see [Deleting a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#delete-service-linked-role) in the *IAM User Guide*\. 
+Use the IAM console, the AWS CLI, or the AWS API to delete the `AWSServiceRoleForAWSLicenseManagerRole` service\-linked role\. If you are also using [AWSLicenseManagerMasterAccountRole](management-role.md) and [AWSLicenseManagerMemberAccountRole](member-role.md), delete those roles first\. For more information, see [Deleting a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#delete-service-linked-role) in the *IAM User Guide*\. 

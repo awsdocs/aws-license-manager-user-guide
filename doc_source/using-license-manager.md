@@ -1,6 +1,6 @@
 # Working with AWS License Manager<a name="using-license-manager"></a>
 
-License Manager can be applied to standard scenarios for enterprises with a mixed infrastructure of AWS resources and on\-premises resources\. You can create license configurations, take inventory of your license\-consuming resources, associate licenses with resources, and track inventory and compliance\.
+License Manager can be applied to standard scenarios for enterprises with a mixed infrastructure of AWS resources and on\-premises resources\. You can create self\-managed licenses, take inventory of your license\-consuming resources, associate self\-managed licenses with resources, and track inventory and compliance\.
 
 **Licensing for AWS Marketplace products**  
 Using License Manager, you can now associate licensing rules to AWS Marketplace BYOL AMI products via Amazon EC2 launch templates, AWS CloudFormation templates, or AWS Service Catalog products\. In each case, you benefit from centralized license\-tracking and compliance enforcement\.
@@ -16,19 +16,20 @@ With License Manager, you can identify which resources have a license that is in
 
 **License Manager across your AWS accounts**
 
-License Manager enables you to manage licenses across your AWS accounts\. You can create license configurations once in your AWS Organizations management account and share them across your accounts using AWS Resource Access Manager or by linking AWS Organizations accounts using License Manager settings\. This also enables you to perform cross\-account discovery to search inventory across your AWS accounts\. However, the following Regions do not support license management across AWS accounts:
+License Manager enables you to manage licenses across your AWS accounts\. You can create self\-managed licenses once in your AWS Organizations management account and share them across your accounts using AWS Resource Access Manager or by linking AWS Organizations accounts using License Manager settings\. This also enables you to perform cross\-account discovery with inventory search operations across your AWS accounts\. However, the following Regions do not support license management across AWS accounts:
 + China \(Beijing\)
 + China \(Ningxia\)
 
 **Topics**
-+ [License configurations](license-configurations.md)
++ [Self\-managed licenses](license-configurations.md)
 + [License rules](license-rules.md)
 + [License reports](license-reporting.md)
 + [License type conversions](license-conversion.md)
 + [Host resource groups](host-resource-groups.md)
-+ [Resource inventory](inventory.md)
++ [Inventory search](inventory.md)
 + [Granted licenses](granted-licenses.md)
 + [Seller issued licenses](seller-issued-licenses.md)
++ [User\-based subscriptions](user-based-subscriptions.md)
 + [Delegated administration](delegated-administrator.md)
 + [Settings](settings.md)
 + [Dashboard](dashboard.md)

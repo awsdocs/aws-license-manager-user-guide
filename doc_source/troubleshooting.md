@@ -4,15 +4,15 @@ The following information can help you troubleshoot issues when using AWS Licens
 
 ## Cross\-account discovery error<a name="issue1"></a>
 
-While setting up cross\-account discovery, you may encounter the following error message on the **Search Inventory** page: 
+While setting up cross\-account discovery, you may encounter the following error message on the **Inventory search** page: 
 
 *Athena Exception: Athena Query failed because \- Insufficient permissions to execute the query\. Please migrate your Catalog to enable access to this database\.* 
 
 This can occur if your Athena service uses the Athena\-managed data catalog rather than the AWS Glue Data Catalog\. For upgrade instructions, see [Upgrading to the AWS Glue Data Catalog Step\-by\-Step](https://docs.aws.amazon.com/athena/latest/ug/glue-upgrade.html)\.
 
-## Master account cannot disassociate resources from a license Configuration<a name="issue3"></a>
+## Master account cannot disassociate resources from a self\-managed license<a name="issue3"></a>
 
-If a member account of an Organization deletes the `AWSServiceRoleForAWSLicenseManagerMemberAccountRole` Service Linked Role \(SLR\) in its account, and there are member\-owned resources associated with a license configuration, the management account is prevented from disassociating licenses from those member\-account resources\. This means that the member account resources will continue to consume licenses from the management account pool\. To allow the management account to disassociate resources, restore the SLR\.
+If a member account of an Organization deletes the `AWSServiceRoleForAWSLicenseManagerMemberAccountRole` Service Linked Role \(SLR\) in its account, and there are member\-owned resources associated with a self\-managed license, the management account is prevented from disassociating licenses from those member\-account resources\. This means that the member account resources will continue to consume licenses from the management account pool\. To allow the management account to disassociate resources, restore the SLR\.
 
 This behavior accounts for cases when a customer prefers not to allow the management account to perform some actions affecting member\-account resources\.
 
@@ -22,7 +22,7 @@ Systems Manager stores data in its Inventory data for 30 days\. During this peri
 
 ## Apparent persistence of a de\-registered AMI<a name="deregistered_ami"></a>
 
-License Manager purges stale associations between resources and license configurations once every few hours\. If an AMI associated with a license configuration is deregistered through Amazon EC2, The AMI may briefly continue to appear in the License Manager resource inventory before being purged\.
+License Manager purges stale associations between resources and self\-managed licenses once every few hours\. If an AMI associated with a self\-managed license is deregistered through Amazon EC2, The AMI may briefly continue to appear in the License Manager resource inventory before being purged\.
 
 ## New child account instances are slow to appear in resource inventory<a name="inventory_delay_1"></a>
 
@@ -36,12 +36,12 @@ When you enable cross\-account mode in License Manager, instances in child accou
 
 After an account is configured for cross\-account discovery, it is impossible to revert to single\-account discovery\.
 
-## Child account user cannot associate shared license configuration with an instance<a name="associating_child_account"></a>
+## Child account user cannot associate shared self\-managed license with an instance<a name="associating_child_account"></a>
 
 When this occurs and cross\-account discovery has been enabled, check for the following:
 + The child account has been removed from the organization\.
 + The child account has been removed from the resource share created in the management account\.
-+ The license configuration has been removed from the resource share\.
++ The self\-managed license has been removed from the resource share\.
 
 ## Linking AWS Organizations accounts fails<a name="organizations_blocked"></a>
 
