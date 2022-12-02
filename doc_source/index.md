@@ -47,6 +47,7 @@ sponsored by Amazon.
       + [Prerequisites](user-based-subscriptions-prerequisites.md)
       + [Getting started with user-based subscriptions](user-based-subscriptions-getting-started.md)
       + [Modifying directory settings for user-based subscriptions](user-based-subscriptions-modify-ad.md)
+      + [Modifying VPC settings for user-based subscriptions](user-based-subscriptions-modify-vpc.md)
       + [Disassociating users from user-based subscriptions](user-based-subscriptions-disassociate-users.md)
       + [Unsubscribing users from user-based subscriptions](user-based-subscriptions-unsubscribe-users.md)
       + [Terminating EC2 instances providing user-based subscriptions](user-based-subscriptions-terminate-instances.md)

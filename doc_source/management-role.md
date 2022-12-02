@@ -31,11 +31,11 @@ The role permissions policy allows License Manager to complete the following act
 | glue:GetTable | \* | 
 | glue:GetPartition | \* | 
 | glue:GetPartitions | \* | 
-| glue:CreateTable | See footnote † | 
-| glue:UpdateTable | See footnote † | 
-| glue:DeleteTable | See footnote † | 
-| glue:UpdateJob | See footnote † | 
-| glue:UpdateCrawler | See footnote † | 
+| glue:CreateTable | See footnote ¹ | 
+| glue:UpdateTable | See footnote ¹ | 
+| glue:DeleteTable | See footnote ¹ | 
+| glue:UpdateJob | See footnote ¹ | 
+| glue:UpdateCrawler | See footnote ¹ | 
 | organizations:DescribeOrganization | \* | 
 | organizations:ListAccounts | \* | 
 | organizations:DescribeAccount | \* | 
@@ -60,7 +60,7 @@ The role permissions policy allows License Manager to complete the following act
 | cloudformation:DeleteStack | arn:aws:cloudformation:\*:\*:stack/LicenseManagerCrossAccountCloudDiscoveryStack/\* | 
 | cloudformation:DescribeStacks | arn:aws:cloudformation:\*:\*:stack/LicenseManagerCrossAccountCloudDiscoveryStack/\* | 
 
-† The following are the resources defined for the AWS Glue actions:
+¹ The following are the resources defined for the AWS Glue actions:
 + `arn:aws:glue:*:*:catalog`
 + `arn:aws:glue:*:*:crawler/LicenseManagerResourceSynDataCrawler`
 + `arn:aws:glue:*:*:job/LicenseManagerResourceSynDataProcessJob`

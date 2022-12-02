@@ -22,11 +22,12 @@ The settings for License Manager include the following:
 + [Cross\-account resource discovery](#settings-resource-discovery)
 + [Delegated administrator](#settings-delegated-administrator)
 + [AWS Managed Microsoft AD](#settings-managed-ad)
++ [Virtual private cloud](#settings-vpc)
 + [Simple Notification Service \(SNS\)](#settings-sns)
 
 ## Account details<a name="settings-account-details"></a>
 
-You can review your account details to see information such as the account type, whether AWS Organizations accounts are linked, the account's License Manager S3 bucket ARN, and the AWS Resource Access Manager share ARN\. This section also enables you to link your AWS Organizations accounts\.
+You can review your account details to see information such as the account type, whether accounts in AWS Organizations are linked, the account's License Manager S3 bucket ARN, and the AWS Resource Access Manager share ARN\. This section also enables you to link your AWS Organizations accounts\.
 
 To distribute managed entitlements or self\-managed licenses within your organization, choose **Link AWS Organizations accounts**\. The distributed grants for managed entitlements are auto\-accepted by all of your member accounts\. When you select this option, we add a service\-linked role to the [ management](management-role.md) and [member](member-role.md) accounts\.
 
@@ -38,14 +39,14 @@ To disable this option, call the [UpdateServiceSettings](https://docs.aws.amazon
 
 ## Cross\-account resource discovery<a name="settings-resource-discovery"></a>
 
-You can turn on cross\-account resource discovery in order to manage license usage across all of your AWS Organizations accounts\.
+You can turn on cross\-account resource discovery in order to manage license usage across all of your accounts in AWS Organizations\.
 
-To enable cross\-account resource discovery in your Organizations, Choose **Turn on** for cross\-account resource discovery\. When you turn on the cross\-account resource discovery, your AWS Organizations will automatically be linked to perform resource discovery across all of your accounts\. 
+To enable cross\-account resource discovery in your organization, choose **Turn on** for cross\-account resource discovery\. When you turn on the cross\-account resource discovery, AWS Organizations will automatically be linked to perform resource discovery across all of your accounts\. 
 
 **Note**  
 License Manager uses [Systems Manager inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) to discover software usage\. Verify that you have configured Systems Manager inventory on all of your resources\. Querying Systems Manager inventory requires the following:  
 [Resource data sync](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html) to store inventory in an Amazon S3 bucket\.
-[Amazon Athena](https://docs.aws.amazon.com/athena/latest/ug/what-is.html) to aggregate inventory data from organizational accounts\.
+[Amazon Athena](https://docs.aws.amazon.com/athena/latest/ug/what-is.html) to aggregate inventory data from your accounts in AWS Organizations\.
 [AWS Glue](https://docs.aws.amazon.com/glue) to provide a fast query experience\.
 
 ## Delegated administrator<a name="settings-delegated-administrator"></a>
@@ -55,6 +56,10 @@ You can delegate a member account from your organization to perform administrati
 ## AWS Managed Microsoft AD<a name="settings-managed-ad"></a>
 
 License Manager requires AWS Managed Microsoft AD to be configured before you can work with user\-based subscriptions\. For more information, see [User\-based subscriptions in AWS License Manager](user-based-subscriptions.md)\.
+
+## Virtual private cloud<a name="settings-vpc"></a>
+
+License Manager requires your VPC to be configured, in addition to your AWS Managed Microsoft AD, when you use user\-based subscriptions with Microsoft Office\. For more information, see [User\-based subscriptions in AWS License Manager](user-based-subscriptions.md)\.
 
 ## Simple Notification Service \(SNS\)<a name="settings-sns"></a>
 

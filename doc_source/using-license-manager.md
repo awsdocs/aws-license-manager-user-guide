@@ -23,7 +23,7 @@ License Manager enables you to manage licenses across your AWS accounts\. You ca
 **Topics**
 + [Self\-managed licenses](license-configurations.md)
 + [License rules](license-rules.md)
-+ [License reports](license-reporting.md)
++ [Usage reports](license-reporting.md)
 + [License type conversions](license-conversion.md)
 + [Host resource groups](host-resource-groups.md)
 + [Inventory search](inventory.md)

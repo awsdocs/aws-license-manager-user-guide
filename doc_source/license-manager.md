@@ -27,7 +27,7 @@ You can create licenses in AWS License Manager and distribute them to end users 
 ## Related Services<a name="related-services"></a>
 
 License Manager is integrated with Amazon EC2, allowing you to track licenses for the following resources:
-+ EC2 instances
++ [EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html)
 + [Dedicated Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html)
 + [Dedicated Hosts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html)
 + [Spot Instances and Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)

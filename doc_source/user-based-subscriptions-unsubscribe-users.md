@@ -11,6 +11,6 @@ You must first disassociate the user from instances where they are currently ass
 
 1. In the left navigation pane, under **User\-based subscriptions**, choose **Products**\.
 
-1. Select the product you want to unsubscribe users from\.
+1. Select the product that you want to unsubscribe users from\.
 
 1. Select the user names to unsubscribe, then choose **Unsubscribe users**\.

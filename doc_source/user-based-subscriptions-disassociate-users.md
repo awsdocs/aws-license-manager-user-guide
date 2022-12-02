@@ -11,6 +11,6 @@ Deleting a user from the directory will not alter user associations or subscript
 
 1. In the left navigation pane, under **User\-based subscriptions**, choose **User association**\.
 
-1. Select the instance you want to disassociate users from\.
+1. Select the instance that you want to disassociate users from\.
 
 1. Select the user names to disassociate, then choose **Disassociate users**\.

@@ -18,13 +18,14 @@ The role permissions policy allows License Manager to complete the following act
 | ssm:ListCommandInvocations | \* | 
 | ssm:DescribeInstanceInformation | \* | 
 | ec2:DescribeInstances | \* | 
-| ec2:TerminateInstances | arn:aws:ec2:\*:\*:instance/\* † | 
-| ec2:CreateTags | arn:aws:ec2:\*:\*:instance/\* † | 
-| ssm:SendCommand | arn:aws:ssm:\*::document/AWS\-RunPowerShellScript ‡arn:aws:ec2:\*:\*:instance/\* ‡ | 
+| ec2:DescribeVpcPeeringConnections | \* | 
+| ec2:TerminateInstances | arn:aws:ec2:\*:\*:instance/\* ¹ | 
+| ec2:CreateTags | arn:aws:ec2:\*:\*:instance/\* ¹ | 
+| ssm:SendCommand | arn:aws:ssm:\*::document/AWS\-RunPowerShellScript ²arn:aws:ec2:\*:\*:instance/\* ² | 
 
-† License Manager can only create tags on and terminate instances which have the product codes [bz0vcy31ooqlzk5tsash4r1ik](http://aws.amazon.com/marketplace/pp/prodview-dzstlnjdl3izg) or [d44g89hc0gp9jdzm99rznthpw](http://aws.amazon.com/marketplance/pp/prodview-zo3zltrbpgr5i)\.
+¹ License Manager can only create tags on and terminate instances which have the product codes [bz0vcy31ooqlzk5tsash4r1ik](http://aws.amazon.com/marketplace/pp/prodview-dzstlnjdl3izg), [77yzkpa7kvee1y1tt7wnsdwoc](http://aws.amazon.com/marketplace/pp/prodview-bh46d5p2hapns), or [d44g89hc0gp9jdzm99rznthpw](http://aws.amazon.com/marketplace/pp/prodview-zo3zltrbpgr5i)\.
 
-‡ License Manager can only execute an SSM Run Command with the `AWS-RunPowerShellScript` document on instances with the tag name of `AWSLicenseManager` and a value of `UserSubscriptions`\.
+² License Manager can only execute an SSM Run Command with the `AWS-RunPowerShellScript` document on instances with the tag name of `AWSLicenseManager` and a value of `UserSubscriptions`\.
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 

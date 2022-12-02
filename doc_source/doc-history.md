@@ -3,8 +3,11 @@
 The following table describes the releases of AWS License Manager\.
 
 
-| Feature | Description | Date | 
+| Change | Description | Date | 
 | --- | --- | --- | 
+| Microsoft Office for user\-based subscriptions | License Manager added Microsoft Office as supported software for user\-based subscriptions\. | November 28, 2022 | 
+| Distribute entitlements to organizational units | Distribute entitlements to specific a specific OU in your organization\. | November 17, 2022 | 
+| Organization wide view \(console\) | Manage granted licenses across your accounts in AWS Organizations using the License Manager console\. | November 11, 2022 | 
 | User\-based subscriptions | Utilize supported user\-based subscription products on Amazon EC2\. | August 2, 2022 | 
 | Record and submit license usage data \(console\) | Record and submit license usage data using the License Manager console\. | March 28, 2022 | 
 | License type conversion \(console\) | Change your license type between AWS\-provided licensing and Bring Your Own License model \(BYOL\) using the License Manager console without redeploying your existing workloads\. | November 9, 2021 | 
