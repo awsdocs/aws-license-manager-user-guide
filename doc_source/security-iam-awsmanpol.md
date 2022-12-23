@@ -4,23 +4,23 @@ To add permissions to users, groups, and roles, it is easier to use AWS managed 
 
 AWS services maintain and update AWS managed policies\. You can't change the permissions in AWS managed policies\. Services occasionally add additional permissions to an AWS managed policy to support new features\. This type of update affects all identities \(users, groups, and roles\) where the policy is attached\. Services are most likely to update an AWS managed policy when a new feature is launched or when new operations become available\. Services do not remove permissions from an AWS managed policy, so policy updates won't break your existing permissions\.
 
-Additionally, AWS supports managed policies for job functions that span multiple services\. For example, the **ReadOnlyAccess** AWS managed policy provides read\-only access to all AWS services and resources\. When a service launches a new feature, AWS adds read\-only permissions for new operations and resources\. For a list and descriptions of job function policies, see [AWS managed policies for job functions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html) in the *IAM User Guide*\.
+Additionally, AWS supports managed policies for job functions that span multiple services\. For example, the `ReadOnlyAccess` AWS managed policy provides read\-only access to all AWS services and resources\. When a service launches a new feature, AWS adds read\-only permissions for new operations and resources\. For a list and descriptions of job function policies, see [AWS managed policies for job functions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html) in the *IAM User Guide*\.
 
 ## AWS managed policy: AWSLicenseManagerServiceRolePolicy<a name="security-iam-AWSLicenseManagerServiceRolePolicy"></a>
 
-This policy is attached to the service\-linked role named **AWSServiceRoleForAWSLicenseManagerRole** to allow License Manager to call API actions to manage licenses on your behalf\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
+This policy is attached to the service\-linked role named `AWSServiceRoleForAWSLicenseManagerRole` to allow License Manager to call API actions to manage licenses on your behalf\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
 
 To view the permissions for this policy, see in the [AWSLicenseManagerServiceRolePolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerServiceRolePolicy)\.
 
 ## AWS managed policy: AWSLicenseManagerMasterAccountRolePolicy<a name="security-iam-AWSLicenseManagerMasterAccountRolePolicy"></a>
 
-This policy is attached to the service\-linked role named **AWSServiceRoleForAWSLicenseManagerMasterAccountRole** to allow License Manager to call API actions to manage license management for a central management account on your behalf\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
+This policy is attached to the service\-linked role named `AWSServiceRoleForAWSLicenseManagerMasterAccountRole` to allow License Manager to call API actions to manage license management for a central management account on your behalf\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
 
 To view the permissions for this policy, see in the [AWSLicenseManagerMasterAccountRolePolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerMasterAccountRolePolicy)\.
 
 ## AWS managed policy: AWSLicenseManagerMemberAccountRolePolicy<a name="security-iam-AWSLicenseManagerMemberAccountRolePolicy"></a>
 
-This policy is attached to the service\-linked role named **AWSServiceRoleForAWSLicenseManagerMemberAccountRole** to allow License Manager to call API actions for license management from a configured management account on your behalf\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
+This policy is attached to the service\-linked role named `AWSServiceRoleForAWSLicenseManagerMemberAccountRole` to allow License Manager to call API actions for license management from a configured management account on your behalf\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
 
 To view the permissions for this policy, see in the [AWSLicenseManagerMemberAccountRolePolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerMemberAccountRolePolicy)\.
 
