@@ -30,6 +30,7 @@ License Manager enables you to manage licenses across your AWS accounts\. You ca
 + [Granted licenses](granted-licenses.md)
 + [Seller issued licenses](seller-issued-licenses.md)
 + [User\-based subscriptions](user-based-subscriptions.md)
++ [Linux subscriptions](linux-subscriptions.md)
 + [Delegated administration](delegated-administrator.md)
 + [Settings](settings.md)
 + [Dashboard](dashboard.md)

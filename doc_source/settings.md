@@ -1,19 +1,24 @@
 # Settings in License Manager<a name="settings"></a>
 
-The **Settings** section of the License Manager console displays settings for the logged\-in account\. You must configure settings to enable certain functionality such as distribution of managed entitlements and self\-managed licenses to your organization, as well as for performing cross\-account inventory discovery\.
+The **Settings** section of the License Manager console displays settings for the current account\. You must configure settings to enable certain functionality such as distribution of managed entitlements and self\-managed licenses to your organization, as well as for performing cross\-account resource discovery\.
 
-The settings for License Manager include the following:
-+ **Account details**
-+ **Cross\-account resource discovery**
-+ **Delegated administrator**
-+ **Microsoft Active Directory**
-+ **Simple Notification Service \(SNS\)**
+The **Managed licenses** tab has the following sections: 
++ Account details
++ Cross\-account resource discovery
++ Delegated administrator
++ AWS Managed Microsoft AD
++ Simple Notification Service \(SNS\)
+
+The **Linux subscriptions** tab has the following section:
++ Linux subscriptions settings
 
 **To edit License Manager settings**
 
 1. Open the License Manager console at [https://console\.aws\.amazon\.com/license\-manager/](https://console.aws.amazon.com/license-manager/)\.
 
 1. In the left navigation pane, choose **Settings**\.
+
+1. Choose the tab containing the settings you wish to configure or modify\. For example, choose **Managed licenses** to configure **Account details**\.
 
 1. Choose the relevant action for the setting you wish to configure or modify\. For example, you might choose **Edit** or **Turn on**\.
 
@@ -24,6 +29,7 @@ The settings for License Manager include the following:
 + [AWS Managed Microsoft AD](#settings-managed-ad)
 + [Virtual private cloud](#settings-vpc)
 + [Simple Notification Service \(SNS\)](#settings-sns)
++ [Linux subscriptions settings](#settings-linux-subscriptions)
 
 ## Account details<a name="settings-account-details"></a>
 
@@ -74,3 +80,7 @@ You can configure an Amazon SNS to receive notifications and alerts from License
    `arn:<aws_partition>:sns:region:account_id:aws-license-manager-service-*`
 
 1. Choose **Save changes**\.
+
+## Linux subscriptions settings<a name="settings-linux-subscriptions"></a>
+
+You can configure settings for Linux subscriptions to control how the discovery and aggregation of your subscriptions are performed\. You can choose the Regions for which you want to discover Linux subscriptions for, and whether you want to aggregate subscription data across your accounts in AWS Organizations\. For more information, see [Linux subscriptions in AWS License Manager](linux-subscriptions.md)\.

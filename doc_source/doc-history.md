@@ -5,6 +5,8 @@ The following table describes the releases of AWS License Manager\.
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Linux subscriptions | License Manager added tracking for commercial Linux subscriptions\. | December 21, 2022 | 
+| Amazon CloudWatch metrics | License Manager now emits CloudWatch metrics for license configuration usage and subscriptions\. | December 21, 2022 | 
 | Microsoft Office for user\-based subscriptions | License Manager added Microsoft Office as supported software for user\-based subscriptions\. | November 28, 2022 | 
 | Distribute entitlements to organizational units | Distribute entitlements to specific a specific OU in your organization\. | November 17, 2022 | 
 | Organization wide view \(console\) | Manage granted licenses across your accounts in AWS Organizations using the License Manager console\. | November 11, 2022 | 

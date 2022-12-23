@@ -1,6 +1,6 @@
 # Getting started with user\-based subscriptions<a name="user-based-subscriptions-getting-started"></a>
 
-The following steps detail how you can get started with utilizing user\-based subscriptions\. These steps assume you have already implemented the required prerequisites\. For more information, see the [Prerequisites](user-based-subscriptions-prerequisites.md) section\.
+The following steps detail how you can get started with utilizing user\-based subscriptions\. These steps assume you have already implemented the required prerequisites\. For more information, see the [Prerequisites](user-based-subscriptions-prerequisites.md)\.
 
 If you have already configured your AWS Managed Microsoft AD for user\-based subscriptions and would also like to use Microsoft Office, see [Modifying VPC settings for user\-based subscriptions](user-based-subscriptions-modify-vpc.md)\.
 
@@ -20,7 +20,7 @@ If you will be utilizing Microsoft Office with user\-based subscriptions, you mu
 You must configure DNS forwarding for any additional VPCs to the AWS Managed Microsoft AD you register for user\-based subscriptions\. If you require user\-based subscriptions in multiple AWS Regions, you will need to perform the following steps in each Region as well as configure DNS forwarding\. For more information, see the [Prerequisites](user-based-subscriptions-prerequisites.md)\.
 
 **Important**  
-You must allow License Manager to create the required [service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role) before you can proceed\. For more information, see the [Prerequisites](user-based-subscriptions-prerequisites.md) section\.
+You must allow License Manager to create the required [service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role) before you can proceed\. For more information, see the [Prerequisites](user-based-subscriptions-prerequisites.md)\.
 
 You can use one of the following methods to configure your environment for user\-based subscriptions\.
 

@@ -33,7 +33,7 @@ You don't need to manually create the service\-linked role\. You can enable inte
 
 If you delete this service\-linked role and then need to create it again, you can use the same process to recreate the role in your account\.
 
-You can also use the IAM console, AWS CLI, or the IAM API to create a service\-linked role manually\. For more information, see [Creating a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\.
+You can also use the IAM console, AWS CLI, or the AWS API to create a service\-linked role manually\. For more information, see [Creating a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\.
 
 **Important**  
 This service\-linked role can appear in your account if you completed an action in another service that uses the features supported by this role\. If you were using the License Manager service before January 1, 2017, when it began supporting service\-linked roles, then License Manager created the `AWSServiceRoleForAWSLicenseManagerMemberAccountRole` role in your account\. For more information, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
@@ -52,7 +52,7 @@ You can use the License Manager console to create a service\-linked role\.
 
 1. Choose **Apply**\. This creates the roles [AWSServiceRoleForAWSLicenseManagerRole](license-manager-role-core.md) and [AWSServiceRoleForAWSLicenseManagerMemberAccountRole](#member-role) in all child accounts\.
 
-You can also use the IAM console to create a service\-linked role with the **License Manager \- Member account** use case\. Alternatively, in the AWS CLI or AWS API, create a service\-linked role with the `license-manager.member-account.amazonaws.com` service name\. For more information, see [Creating a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. 
+You can also use the IAM console to create a service\-linked role with the `License Manager - Member account` use case\. Alternatively, in the AWS CLI or AWS API, create a service\-linked role with the `license-manager.member-account.amazonaws.com` service name\. For more information, see [Creating a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. 
 
 If you delete this service\-linked role, you can use the same IAM process to create the role again\.
 

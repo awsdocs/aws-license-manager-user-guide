@@ -32,18 +32,25 @@ To view the permissions for this policy, see [AWSLicenseManagerConsumptionPolicy
 
 ## AWS managed policy: AWSLicenseManagerUserSubscriptionsServiceRolePolicy<a name="security-iam-AWSLicenseManagerUserSubscriptionsServiceRolePolicy"></a>
 
-This policy is attached to the service\-linked role named `AWSServiceRoleAWSLicenseManagerUserSubscriptionsService` policy to allow License Manager to call API actions to manage user\-based subscription resources\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
+This policy is attached to the service\-linked role named `AWSServiceRoleForAWSLicenseManagerUserSubscriptionsService` policy to allow License Manager to call API actions to manage user\-based subscription resources\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
 
-To view the permissions for this policy, see in the [AWSLicenseManagerUserSubscriptionsPolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerUserSubscriptionsPolicy)\.
+To view the permissions for this policy, see in the [AWSLicenseManagerUserSubscriptionsPolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerUserSubscriptionsServiceRolePolicy)\.
+
+## AWS managed policy: AWSLicenseManagerLinuxSubscriptionsServiceRolePolicy<a name="security-iam-AWSLicenseManagerLinuxSubscriptionsServiceRolePolicy"></a>
+
+This policy is attached to the service\-linked role named `AWSServiceRoleForAWSLicenseManagerLinuxSubscriptionsService` policy to allow License Manager to call API actions to manage Linux subscriptions resources\. For more information, see [Using service\-linked roles for AWS License Manager](using-service-linked-roles.md)\.
+
+To view the permissions for this policy, see in the [AWSLicenseManagerLinuxSubscriptionsServiceRolePolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSLicenseManagerLinuxSubscriptionsServiceRolePolicy)\.
 
 ## License Manager updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
-View details about updates to AWS managed policies for License Manager since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the License Manager Document history page\.
+View details about updates to AWS managed policies for License Manager since this service began tracking these changes\.
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-| [AWSLicenseManagerUserSubscriptionsServiceRolePolicy](#security-iam-AWSLicenseManagerMasterAccountRolePolicy) – Update to an existing policy | License Manager added the ec2:DescribeVpcPeeringConnections permission\. | November 28, 2022 | 
+| [AWSLicenseManagerLinuxSubscriptionsServiceRolePolicy](#security-iam-AWSLicenseManagerLinuxSubscriptionsServiceRolePolicy) – New policy | License Manager added a permission to create the service\-linked role named AWSServiceRoleForAWSLicenseManagerLinuxSubscriptionsService\. This role provides License Manager permission to list AWS Organizations and Amazon EC2 resources\. | December 21, 2022 | 
+| [AWSLicenseManagerUserSubscriptionsServiceRolePolicy](#security-iam-AWSLicenseManagerUserSubscriptionsServiceRolePolicy) – Update to an existing policy | License Manager added the ec2:DescribeVpcPeeringConnections permission\. | November 28, 2022 | 
 | [AWSLicenseManagerUserSubscriptionsServiceRolePolicy](#security-iam-AWSLicenseManagerMasterAccountRolePolicy) – New policy | License Manager added a permission to create the service\-linked role named AWSLicenseManagerUserSubscriptionsServiceRolePolicy\. This role provides License Manager permission to list AWS Directory Service resources, utilize Systems Manager features, and manage Amazon EC2 resources created for user\-based subscriptions\. | July 18, 2022 | 
 | [AWSLicenseManagerMasterAccountRolePolicy](#security-iam-AWSLicenseManagerMasterAccountRolePolicy) – Update to an existing policy | License Manager added the resource\-groups:PutGroupPolicy permission for resource groups managed by AWS Resource Access Manager\. | June 27, 2022 | 
 | [AWSLicenseManagerMasterAccountRolePolicy](#security-iam-AWSLicenseManagerMasterAccountRolePolicy) – Update to an existing policy | License Manager changed the AWS managed policy AWSLicenseManagerMasterAccountRolePolicy [condition key for AWS Resource Access Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceaccessmanager.html) from using ram:ResourceTag to aws:ResourceTag\. | November 16, 2021 | 

@@ -4,7 +4,7 @@ License Manager requires a service\-linked role to manage licenses on your behal
 
 ## Permissions for the core role<a name="service-linked-role-permissions-core-role"></a>
 
-The service\-linked role named **AWSServiceRoleForAWSLicenseManagerRole** allows License Manager access to AWS resources to manage licenses on your behalf\.
+The service\-linked role named `AWSServiceRoleForAWSLicenseManagerRole` allows License Manager access to AWS resources to manage licenses on your behalf\.
 
 The `AWSServiceRoleForAWSLicenseManagerRole` service\-linked role trusts the `license-manager.amazonaws.com` service to assume the role\.
 
